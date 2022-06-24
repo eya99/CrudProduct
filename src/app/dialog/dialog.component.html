@@ -1,0 +1,28 @@
+<h1 mat-dialog-title> Ajouter un produit </h1>
+<div mat-dialog-content>
+
+    <form [formGroup]="albumForm">
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nom produit </mat-label>
+            <input formControlName="productName" matInput placeholder="Entrer le nom de produit">
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Quantité produit </mat-label>
+            <input formControlName="amountAvailable" matInput placeholder="Entrer la Quantité de produit">
+
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>montant produit </mat-label>
+            <input formControlName="cost" matInput placeholder="Entrer le montant de produit">
+
+        </mat-form-field>
+    </form>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close> Close</button>
+        <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addAlbum()">{{actionBtn}}</button>
+    </div>
+</div>
